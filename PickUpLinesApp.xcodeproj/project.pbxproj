@@ -7,23 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35120E212C28641A00D043D7 /* PickUpLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35120E202C28641A00D043D7 /* PickUpLineModel.swift */; };
 		35F7EF402B8F53A2001DDFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF3F2B8F53A2001DDFB0 /* AppDelegate.swift */; };
 		35F7EF422B8F53A2001DDFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF412B8F53A2001DDFB0 /* SceneDelegate.swift */; };
-		35F7EF442B8F53A2001DDFB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF432B8F53A2001DDFB0 /* ViewController.swift */; };
-		35F7EF472B8F53A2001DDFB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F7EF452B8F53A2001DDFB0 /* Main.storyboard */; };
+		35F7EF442B8F53A2001DDFB0 /* PickUpLineVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF432B8F53A2001DDFB0 /* PickUpLineVc.swift */; };
 		35F7EF492B8F53A4001DDFB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F7EF482B8F53A4001DDFB0 /* Assets.xcassets */; };
 		35F7EF4C2B8F53A4001DDFB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F7EF4A2B8F53A4001DDFB0 /* LaunchScreen.storyboard */; };
+		35F7EF582B8F5951001DDFB0 /* LBTATools in Frameworks */ = {isa = PBXBuildFile; productRef = 35F7EF572B8F5951001DDFB0 /* LBTATools */; };
+		35F7EF5B2B8F709C001DDFB0 /* PickUpLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF5A2B8F709C001DDFB0 /* PickUpLineCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35120E202C28641A00D043D7 /* PickUpLineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpLineModel.swift; sourceTree = "<group>"; };
 		35F7EF3C2B8F53A2001DDFB0 /* PickUpLinesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickUpLinesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F7EF3F2B8F53A2001DDFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F7EF412B8F53A2001DDFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		35F7EF432B8F53A2001DDFB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		35F7EF462B8F53A2001DDFB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35F7EF432B8F53A2001DDFB0 /* PickUpLineVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpLineVc.swift; sourceTree = "<group>"; };
 		35F7EF482B8F53A4001DDFB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35F7EF4B2B8F53A4001DDFB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35F7EF4D2B8F53A4001DDFB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35F7EF5A2B8F709C001DDFB0 /* PickUpLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpLineCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F7EF582B8F5951001DDFB0 /* LBTATools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +60,48 @@
 		35F7EF3E2B8F53A2001DDFB0 /* PickUpLinesApp */ = {
 			isa = PBXGroup;
 			children = (
-				35F7EF3F2B8F53A2001DDFB0 /* AppDelegate.swift */,
-				35F7EF412B8F53A2001DDFB0 /* SceneDelegate.swift */,
-				35F7EF432B8F53A2001DDFB0 /* ViewController.swift */,
-				35F7EF452B8F53A2001DDFB0 /* Main.storyboard */,
-				35F7EF482B8F53A4001DDFB0 /* Assets.xcassets */,
+				35F7EF592B8F7084001DDFB0 /* CustomCell */,
+				35F7EF552B8F546D001DDFB0 /* Model */,
+				35F7EF542B8F5465001DDFB0 /* Controller */,
+				35F7EF532B8F5424001DDFB0 /* Resources */,
 				35F7EF4A2B8F53A4001DDFB0 /* LaunchScreen.storyboard */,
 				35F7EF4D2B8F53A4001DDFB0 /* Info.plist */,
 			);
 			path = PickUpLinesApp;
+			sourceTree = "<group>";
+		};
+		35F7EF532B8F5424001DDFB0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				35F7EF3F2B8F53A2001DDFB0 /* AppDelegate.swift */,
+				35F7EF412B8F53A2001DDFB0 /* SceneDelegate.swift */,
+				35F7EF482B8F53A4001DDFB0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		35F7EF542B8F5465001DDFB0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35F7EF432B8F53A2001DDFB0 /* PickUpLineVc.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35F7EF552B8F546D001DDFB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35120E202C28641A00D043D7 /* PickUpLineModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35F7EF592B8F7084001DDFB0 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				35F7EF5A2B8F709C001DDFB0 /* PickUpLineCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +120,9 @@
 			dependencies = (
 			);
 			name = PickUpLinesApp;
+			packageProductDependencies = (
+				35F7EF572B8F5951001DDFB0 /* LBTATools */,
+			);
 			productName = PickUpLinesApp;
 			productReference = 35F7EF3C2B8F53A2001DDFB0 /* PickUpLinesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +151,9 @@
 				Base,
 			);
 			mainGroup = 35F7EF332B8F53A2001DDFB0;
+			packageReferences = (
+				35F7EF562B8F5951001DDFB0 /* XCRemoteSwiftPackageReference "LBTATools" */,
+			);
 			productRefGroup = 35F7EF3D2B8F53A2001DDFB0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +170,6 @@
 			files = (
 				35F7EF4C2B8F53A4001DDFB0 /* LaunchScreen.storyboard in Resources */,
 				35F7EF492B8F53A4001DDFB0 /* Assets.xcassets in Resources */,
-				35F7EF472B8F53A2001DDFB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F7EF442B8F53A2001DDFB0 /* ViewController.swift in Sources */,
+				35F7EF442B8F53A2001DDFB0 /* PickUpLineVc.swift in Sources */,
 				35F7EF402B8F53A2001DDFB0 /* AppDelegate.swift in Sources */,
+				35120E212C28641A00D043D7 /* PickUpLineModel.swift in Sources */,
+				35F7EF5B2B8F709C001DDFB0 /* PickUpLineCell.swift in Sources */,
 				35F7EF422B8F53A2001DDFB0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		35F7EF452B8F53A2001DDFB0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35F7EF462B8F53A2001DDFB0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		35F7EF4A2B8F53A4001DDFB0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,11 +328,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8YE27GARE;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PickUpLinesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,11 +355,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8YE27GARE;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PickUpLinesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,6 +397,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		35F7EF562B8F5951001DDFB0 /* XCRemoteSwiftPackageReference "LBTATools" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bhlvoong/LBTATools.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.17;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		35F7EF572B8F5951001DDFB0 /* LBTATools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35F7EF562B8F5951001DDFB0 /* XCRemoteSwiftPackageReference "LBTATools" */;
+			productName = LBTATools;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 35F7EF342B8F53A2001DDFB0 /* Project object */;
 }
