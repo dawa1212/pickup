@@ -19,15 +19,16 @@ class PickUpLineCell: UITableViewCell {
     
     lazy private(set) var title: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 16)
+        label.font = .boldSystemFont(ofSize: 28)
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    lazy private(set) var imageIconForSection: UIImageView = {
+    lazy private(set) var imageIcon: UIImageView = {
         let image = UIImageView()
-        image.withWidth(40)
-        image.withHeight(40)
+        image.withWidth(80)
+        image.withHeight(80)
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -42,6 +43,7 @@ class PickUpLineCell: UITableViewCell {
     }
     
     private func prepareLayout() {
+        selectionStyle = .none
         contentView.addSubview(containerView)
         
         NSLayoutConstraint.activate([
@@ -51,16 +53,15 @@ class PickUpLineCell: UITableViewCell {
             containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
         ])
         
-        [title, imageIconForSection].forEach(containerView.addSubview(_:))
+        [title, imageIcon].forEach(containerView.addSubview(_:))
         
         NSLayoutConstraint.activate([
-            title.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
-            title.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
-            title.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
+            title.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
+            title.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
             
-            imageIconForSection.topAnchor.constraint(equalTo: title.topAnchor),
-            imageIconForSection.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
-            imageIconForSection.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
+            imageIcon.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20),
+            imageIcon.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10),
+            imageIcon.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -5)
         ])
     }
 }

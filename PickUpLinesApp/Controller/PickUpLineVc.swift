@@ -9,10 +9,8 @@ import UIKit
 import LBTATools
 
 class PickUpLineVc: UIViewController {
-
-    private lazy var sectionTitles = ["Bad", "Cheesy", "Clever", "Cute", "Dirty", "Food", "Funny", "Hookup", "Nerd", "Romantic"]
-    private lazy var sectionImages = ["bad", "cheesy", "clever", "cute", "dirty", "food", "funny", "hookUp", "nerd", "romantic"]
-    private lazy var sectionColors: [UIColor] = [.red, .blue, .green, .yellow, .brown, .orange, .gray, .purple, .cyan, .magenta]
+    
+    var pickUpModel = PickUpLineModel.getAllModels()
 
     private lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero, style: .plain)
@@ -23,14 +21,11 @@ class PickUpLineVc: UIViewController {
         return view
     }()
 
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
 
         title = "Pickup Lines"
-        navigationController?.navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
 
         view.addSubview(tableView)
@@ -44,34 +39,25 @@ extension PickUpLineVc: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sectionImages.count
+        return pickUpModel.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PickUpLineCell
-
-        cell.title.text = sectionTitles[indexPath.row]
-
-        //Set background color for each section
-//        cell.backgroundColor = sectionColors[indexPath.row]
-
-        //for images to configure
-        let imageName = sectionImages[indexPath.row]
-        cell.imageIconForSection.image = UIImage(named: imageName)
-
+        
+        let models = pickUpModel[indexPath.row]
+        cell.title.text = models.title
+        cell.containerView.backgroundColor = models.color
+        cell.imageIcon.image = UIImage(named: models.imageName)
         return cell
     }
-
 }
 
 extension PickUpLineVc: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        print("row clicked")
     }
-
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 100
-//    }
 
 }
