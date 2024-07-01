@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35120E212C28641A00D043D7 /* PickUpLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35120E202C28641A00D043D7 /* PickUpLineModel.swift */; };
+		3524DB102C2DA52B00776774 /* PickUpLines.json in Resources */ = {isa = PBXBuildFile; fileRef = 3524DB0F2C2DA52B00776774 /* PickUpLines.json */; };
 		35F7EF402B8F53A2001DDFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF3F2B8F53A2001DDFB0 /* AppDelegate.swift */; };
 		35F7EF422B8F53A2001DDFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF412B8F53A2001DDFB0 /* SceneDelegate.swift */; };
 		35F7EF442B8F53A2001DDFB0 /* PickUpLineVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF432B8F53A2001DDFB0 /* PickUpLineVc.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		35120E202C28641A00D043D7 /* PickUpLineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpLineModel.swift; sourceTree = "<group>"; };
+		3524DB0F2C2DA52B00776774 /* PickUpLines.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PickUpLines.json; sourceTree = "<group>"; };
 		35F7EF3C2B8F53A2001DDFB0 /* PickUpLinesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickUpLinesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F7EF3F2B8F53A2001DDFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F7EF412B8F53A2001DDFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				35F7EF532B8F5424001DDFB0 /* Resources */,
 				35F7EF4A2B8F53A4001DDFB0 /* LaunchScreen.storyboard */,
 				35F7EF4D2B8F53A4001DDFB0 /* Info.plist */,
+				3524DB0F2C2DA52B00776774 /* PickUpLines.json */,
 			);
 			path = PickUpLinesApp;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3524DB102C2DA52B00776774 /* PickUpLines.json in Resources */,
 				35F7EF4C2B8F53A4001DDFB0 /* LaunchScreen.storyboard in Resources */,
 				35F7EF492B8F53A4001DDFB0 /* Assets.xcassets in Resources */,
 			);

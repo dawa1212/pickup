@@ -1,0 +1,53 @@
+[
+    {
+        "title": "Bad",
+        "imageName": "bad",
+        "color": "#1E5E94"
+    },
+    {
+        "title": "Cheesy",
+        "imageName": "cheesy",
+        "color": "#11D6EA"
+    },
+    {
+        "title": "Clever",
+        "imageName": "clever",
+        "color": "#8F55F6"
+    },
+    {
+        "title": "Cute",
+        "imageName": "cute",
+        "color": "#D70977"
+    },
+    {
+        "title": "Dirty",
+        "imageName": "dirty",
+        "color": "#7ACBA0"
+    },
+    {
+        "title": "Food",
+        "imageName": "food",
+        "color": "#138BB1"
+    },
+    {
+        "title": "Funny",
+        "imageName": "funny",
+        "color": "#D6596C"
+    },
+    {
+        "title": "Hookup",
+        "imageName": "hookUp",
+        "color": "#F17DB8"
+    },
+    {
+        "title": "Nerd",
+        "imageName": "nerd",
+        "color": "#F07146"
+    },
+    {
+        "title": "Romantic",
+        "imageName": "romantic",
+        "color": "#7DAA1C"
+    }
+]
+
