@@ -7,10 +7,11 @@
 
 import UIKit
 import LBTATools
+import SideMenu
 
 class PickUpLineVc: UIViewController {
-    
-    var pickUpModel: [PickUpLineModel] = []
+
+    private var pickUpModel: [PickUpLineModel] = []
 
     private lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero, style: .plain)
@@ -20,6 +21,8 @@ class PickUpLineVc: UIViewController {
         view.separatorStyle = .none
         return view
     }()
+
+    private var sideMenu: SideMenuNavigationController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,31 @@ class PickUpLineVc: UIViewController {
         pickUpModel = PickUpLineModel.getAllModels()
         view.addSubview(tableView)
         tableView.fillSuperview()
+
+        setupSideMenu()
+    }
+
+    private func setupSideMenu() {
+        let menuVc = MenuViewController()
+        sideMenu = SideMenuNavigationController(rootViewController: menuVc)
+        sideMenu?.leftSide = false
+
+        SideMenuManager.default.rightMenuNavigationController = sideMenu
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+        SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .right)
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: "hamburger"),
+            style: .plain,
+            target: self,
+            action: #selector(didTapMenuBttn)
+        )
+    }
+
+    @objc private func didTapMenuBttn() {
+        if let sideMenu = sideMenu {
+            present(sideMenu, animated: true, completion: nil)
+        }
     }
 }
 
@@ -45,7 +73,7 @@ extension PickUpLineVc: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PickUpLineCell
-        
+
         let model = pickUpModel[indexPath.row]
         cell.title.text = model.title
         cell.containerView.backgroundColor = model.color
@@ -59,5 +87,23 @@ extension PickUpLineVc: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("row clicked")
+    }
+}
+
+extension PickUpLineVc: SideMenuNavigationControllerDelegate {
+    func sideMenuWillAppear(menu: SideMenuNavigationController, animated: Bool) {
+        print("SideMenu Appearing!")
+    }
+
+    func sideMenuDidAppear(menu: SideMenuNavigationController, animated: Bool) {
+        print("SideMenu Appeared!")
+    }
+
+    func sideMenuWillDisappear(menu: SideMenuNavigationController, animated: Bool) {
+        print("SideMenu Disappearing!")
+    }
+
+    func sideMenuDidDisappear(menu: SideMenuNavigationController, animated: Bool) {
+        print("SideMenu Disappeared!")
     }
 }

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		35120E212C28641A00D043D7 /* PickUpLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35120E202C28641A00D043D7 /* PickUpLineModel.swift */; };
 		3524DB102C2DA52B00776774 /* PickUpLines.json in Resources */ = {isa = PBXBuildFile; fileRef = 3524DB0F2C2DA52B00776774 /* PickUpLines.json */; };
+		353300DC2C33058E00003B91 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353300DB2C33058E00003B91 /* MenuViewController.swift */; };
+		355C02DC2C35913D00EE2E47 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 355C02DB2C35913D00EE2E47 /* SideMenu */; };
+		357A60892C356FEE00AE8452 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A60882C356FEE00AE8452 /* Extensions.swift */; };
 		35F7EF402B8F53A2001DDFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF3F2B8F53A2001DDFB0 /* AppDelegate.swift */; };
 		35F7EF422B8F53A2001DDFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF412B8F53A2001DDFB0 /* SceneDelegate.swift */; };
 		35F7EF442B8F53A2001DDFB0 /* PickUpLineVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF432B8F53A2001DDFB0 /* PickUpLineVc.swift */; };
@@ -21,6 +24,8 @@
 /* Begin PBXFileReference section */
 		35120E202C28641A00D043D7 /* PickUpLineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpLineModel.swift; sourceTree = "<group>"; };
 		3524DB0F2C2DA52B00776774 /* PickUpLines.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PickUpLines.json; sourceTree = "<group>"; };
+		353300DB2C33058E00003B91 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		357A60882C356FEE00AE8452 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		35F7EF3C2B8F53A2001DDFB0 /* PickUpLinesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickUpLinesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F7EF3F2B8F53A2001DDFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F7EF412B8F53A2001DDFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355C02DC2C35913D00EE2E47 /* SideMenu in Frameworks */,
 				35F7EF582B8F5951001DDFB0 /* LBTATools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		357A60872C356F4900AE8452 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				357A60882C356FEE00AE8452 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		35F7EF332B8F53A2001DDFB0 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +76,7 @@
 		35F7EF3E2B8F53A2001DDFB0 /* PickUpLinesApp */ = {
 			isa = PBXGroup;
 			children = (
+				357A60872C356F4900AE8452 /* Extensions */,
 				35F7EF592B8F7084001DDFB0 /* CustomCell */,
 				35F7EF552B8F546D001DDFB0 /* Model */,
 				35F7EF542B8F5465001DDFB0 /* Controller */,
@@ -87,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				35F7EF432B8F53A2001DDFB0 /* PickUpLineVc.swift */,
+				353300DB2C33058E00003B91 /* MenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,6 +141,7 @@
 			name = PickUpLinesApp;
 			packageProductDependencies = (
 				35F7EF572B8F5951001DDFB0 /* LBTATools */,
+				355C02DB2C35913D00EE2E47 /* SideMenu */,
 			);
 			productName = PickUpLinesApp;
 			productReference = 35F7EF3C2B8F53A2001DDFB0 /* PickUpLinesApp.app */;
@@ -156,6 +173,7 @@
 			mainGroup = 35F7EF332B8F53A2001DDFB0;
 			packageReferences = (
 				35F7EF562B8F5951001DDFB0 /* XCRemoteSwiftPackageReference "LBTATools" */,
+				355C02DA2C35913D00EE2E47 /* XCRemoteSwiftPackageReference "SideMenu" */,
 			);
 			productRefGroup = 35F7EF3D2B8F53A2001DDFB0 /* Products */;
 			projectDirPath = "";
@@ -185,6 +203,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F7EF442B8F53A2001DDFB0 /* PickUpLineVc.swift in Sources */,
+				353300DC2C33058E00003B91 /* MenuViewController.swift in Sources */,
+				357A60892C356FEE00AE8452 /* Extensions.swift in Sources */,
 				35F7EF402B8F53A2001DDFB0 /* AppDelegate.swift in Sources */,
 				35120E212C28641A00D043D7 /* PickUpLineModel.swift in Sources */,
 				35F7EF5B2B8F709C001DDFB0 /* PickUpLineCell.swift in Sources */,
@@ -403,6 +423,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		355C02DA2C35913D00EE2E47 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
 		35F7EF562B8F5951001DDFB0 /* XCRemoteSwiftPackageReference "LBTATools" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bhlvoong/LBTATools.git";
@@ -414,6 +442,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		355C02DB2C35913D00EE2E47 /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 355C02DA2C35913D00EE2E47 /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
 		35F7EF572B8F5951001DDFB0 /* LBTATools */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 35F7EF562B8F5951001DDFB0 /* XCRemoteSwiftPackageReference "LBTATools" */;
