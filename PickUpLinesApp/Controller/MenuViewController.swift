@@ -17,6 +17,7 @@ open class MenuViewController: UIViewController {
         view.delegate = self
         view.dataSource = self
         view.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        view.isUserInteractionEnabled = false
         return view
     }()
     

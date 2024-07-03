@@ -22,20 +22,49 @@ class PickUpLineVc: UIViewController {
         return view
     }()
 
+    private lazy var customTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Pickup Lines"
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.textColor = .black
+        return label
+    }()
+
+    private lazy var menuButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "hamburger"), for: .normal)
+        button.addTarget(self, action: #selector(didTapMenuBttn), for: .touchUpInside)
+        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        return button
+    }()
+    
+    lazy private var titleMenuStack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [customTitleLabel, UIView(), menuButton])
+        stack.axis = .horizontal
+        stack.alignment = .center
+        stack.spacing = 20
+        return stack
+    }()
+
     private var sideMenu: SideMenuNavigationController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
+        setupSideMenu()
+    }
+
+    private func setupViews() {
+        
         view.backgroundColor = .white
 
-        title = "Pickup Lines"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.titleView = titleMenuStack
 
         pickUpModel = PickUpLineModel.getAllModels()
         view.addSubview(tableView)
         tableView.fillSuperview()
-
-        setupSideMenu()
     }
 
     private func setupSideMenu() {
@@ -46,13 +75,6 @@ class PickUpLineVc: UIViewController {
         SideMenuManager.default.rightMenuNavigationController = sideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: self.view)
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .right)
-
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: UIImage(named: "hamburger"),
-            style: .plain,
-            target: self,
-            action: #selector(didTapMenuBttn)
-        )
     }
 
     @objc private func didTapMenuBttn() {
