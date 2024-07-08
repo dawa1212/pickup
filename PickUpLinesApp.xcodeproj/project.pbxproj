@@ -16,7 +16,7 @@
 		3524DB102C2DA52B00776774 /* PickUpLines.json in Resources */ = {isa = PBXBuildFile; fileRef = 3524DB0F2C2DA52B00776774 /* PickUpLines.json */; };
 		353300DC2C33058E00003B91 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353300DB2C33058E00003B91 /* MenuViewController.swift */; };
 		355C02DC2C35913D00EE2E47 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 355C02DB2C35913D00EE2E47 /* SideMenu */; };
-		357A60892C356FEE00AE8452 /* Color + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A60882C356FEE00AE8452 /* Color + Extensions.swift */; };
+		357A60892C356FEE00AE8452 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A60882C356FEE00AE8452 /* Color+Extensions.swift */; };
 		35F7EF402B8F53A2001DDFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF3F2B8F53A2001DDFB0 /* AppDelegate.swift */; };
 		35F7EF422B8F53A2001DDFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF412B8F53A2001DDFB0 /* SceneDelegate.swift */; };
 		35F7EF442B8F53A2001DDFB0 /* PickUpLineVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EF432B8F53A2001DDFB0 /* PickUpLineVc.swift */; };
@@ -35,7 +35,7 @@
 		35120E202C28641A00D043D7 /* PickUpLineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpLineModel.swift; sourceTree = "<group>"; };
 		3524DB0F2C2DA52B00776774 /* PickUpLines.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PickUpLines.json; sourceTree = "<group>"; };
 		353300DB2C33058E00003B91 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		357A60882C356FEE00AE8452 /* Color + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extensions.swift"; sourceTree = "<group>"; };
+		357A60882C356FEE00AE8452 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		35F7EF3C2B8F53A2001DDFB0 /* PickUpLinesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickUpLinesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F7EF3F2B8F53A2001DDFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F7EF412B8F53A2001DDFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		357A60872C356F4900AE8452 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				357A60882C356FEE00AE8452 /* Color + Extensions.swift */,
+				357A60882C356FEE00AE8452 /* Color+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
