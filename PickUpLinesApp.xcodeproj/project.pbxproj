@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350A43B82C3C37C0002C1501 /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A43B72C3C37C0002C1501 /* MenuViewCell.swift */; };
+		350A43BC2C3C49C2002C1501 /* SettingVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A43BB2C3C49C2002C1501 /* SettingVc.swift */; };
+		350A43BE2C3C4A35002C1501 /* TermsAndConditionVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A43BD2C3C4A35002C1501 /* TermsAndConditionVc.swift */; };
+		350A43C02C3C4B6D002C1501 /* PrivacyAndPolicyVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A43BF2C3C4B6D002C1501 /* PrivacyAndPolicyVc.swift */; };
+		350A43C22C3C4C80002C1501 /* ShareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A43C12C3C4C80002C1501 /* ShareApp.swift */; };
 		35120E212C28641A00D043D7 /* PickUpLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35120E202C28641A00D043D7 /* PickUpLineModel.swift */; };
 		3524DB102C2DA52B00776774 /* PickUpLines.json in Resources */ = {isa = PBXBuildFile; fileRef = 3524DB0F2C2DA52B00776774 /* PickUpLines.json */; };
 		353300DC2C33058E00003B91 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353300DB2C33058E00003B91 /* MenuViewController.swift */; };
@@ -22,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		350A43B72C3C37C0002C1501 /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
+		350A43BB2C3C49C2002C1501 /* SettingVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVc.swift; sourceTree = "<group>"; };
+		350A43BD2C3C4A35002C1501 /* TermsAndConditionVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionVc.swift; sourceTree = "<group>"; };
+		350A43BF2C3C4B6D002C1501 /* PrivacyAndPolicyVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndPolicyVc.swift; sourceTree = "<group>"; };
+		350A43C12C3C4C80002C1501 /* ShareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareApp.swift; sourceTree = "<group>"; };
 		35120E202C28641A00D043D7 /* PickUpLineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpLineModel.swift; sourceTree = "<group>"; };
 		3524DB0F2C2DA52B00776774 /* PickUpLines.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PickUpLines.json; sourceTree = "<group>"; };
 		353300DB2C33058E00003B91 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +59,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		350A43B92C3C492A002C1501 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				353300DB2C33058E00003B91 /* MenuViewController.swift */,
+				350A43BA2C3C494A002C1501 /* MenuVc */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		350A43BA2C3C494A002C1501 /* MenuVc */ = {
+			isa = PBXGroup;
+			children = (
+				350A43BB2C3C49C2002C1501 /* SettingVc.swift */,
+				350A43BD2C3C4A35002C1501 /* TermsAndConditionVc.swift */,
+				350A43BF2C3C4B6D002C1501 /* PrivacyAndPolicyVc.swift */,
+				350A43C12C3C4C80002C1501 /* ShareApp.swift */,
+			);
+			path = MenuVc;
+			sourceTree = "<group>";
+		};
 		357A60872C356F4900AE8452 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				35F7EF432B8F53A2001DDFB0 /* PickUpLineVc.swift */,
-				353300DB2C33058E00003B91 /* MenuViewController.swift */,
+				350A43B92C3C492A002C1501 /* SideMenu */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				35F7EF5A2B8F709C001DDFB0 /* PickUpLineCell.swift */,
+				350A43B72C3C37C0002C1501 /* MenuViewCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -203,10 +234,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F7EF442B8F53A2001DDFB0 /* PickUpLineVc.swift in Sources */,
+				350A43C22C3C4C80002C1501 /* ShareApp.swift in Sources */,
 				353300DC2C33058E00003B91 /* MenuViewController.swift in Sources */,
+				350A43BE2C3C4A35002C1501 /* TermsAndConditionVc.swift in Sources */,
 				357A60892C356FEE00AE8452 /* Color + Extensions.swift in Sources */,
 				35F7EF402B8F53A2001DDFB0 /* AppDelegate.swift in Sources */,
 				35120E212C28641A00D043D7 /* PickUpLineModel.swift in Sources */,
+				350A43C02C3C4B6D002C1501 /* PrivacyAndPolicyVc.swift in Sources */,
+				350A43B82C3C37C0002C1501 /* MenuViewCell.swift in Sources */,
+				350A43BC2C3C49C2002C1501 /* SettingVc.swift in Sources */,
 				35F7EF5B2B8F709C001DDFB0 /* PickUpLineCell.swift in Sources */,
 				35F7EF422B8F53A2001DDFB0 /* SceneDelegate.swift in Sources */,
 			);

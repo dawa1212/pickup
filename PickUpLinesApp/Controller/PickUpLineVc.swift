@@ -39,12 +39,11 @@ class PickUpLineVc: UIViewController {
         button.widthAnchor.constraint(equalToConstant: 40).isActive = true
         return button
     }()
-    
+
     lazy private var titleMenuStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [customTitleLabel, UIView(), menuButton])
         stack.axis = .horizontal
-        stack.alignment = .center
-        stack.spacing = 20
+        stack.spacing = 100
         return stack
     }()
 
@@ -56,12 +55,13 @@ class PickUpLineVc: UIViewController {
         setupSideMenu()
     }
 
-    private func setupViews() {
-        
-        view.backgroundColor = .white
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationItem.titleView = titleMenuStack
+    }
 
+    private func setupViews() {
+        view.backgroundColor = .white
         pickUpModel = PickUpLineModel.getAllModels()
         view.addSubview(tableView)
         tableView.fillSuperview()
