@@ -31,21 +31,11 @@ class PickUpLineVc: UIViewController {
         return label
     }()
 
-    private lazy var menuButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "hamburger"), for: .normal)
-        button.addTarget(self, action: #selector(didTapMenuBttn), for: .touchUpInside)
-        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        button.widthAnchor.constraint(equalToConstant: 40).isActive = true
+    private lazy var menuButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(image:  UIImage(named: "hamburger"), style: .plain, target: self, action:  #selector(didTapMenuBttn))
         return button
     }()
 
-    lazy private var titleMenuStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [customTitleLabel, UIView(), menuButton])
-        stack.axis = .horizontal
-        stack.spacing = 100
-        return stack
-    }()
 
     private var sideMenu: SideMenuNavigationController?
 
@@ -53,11 +43,13 @@ class PickUpLineVc: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupSideMenu()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: customTitleLabel)
+        navigationItem.rightBarButtonItem = menuButton
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.titleView = titleMenuStack
+        
     }
 
     private func setupViews() {
@@ -68,13 +60,13 @@ class PickUpLineVc: UIViewController {
     }
 
     private func setupSideMenu() {
-        let menuVc = MenuViewController()
-        sideMenu = SideMenuNavigationController(rootViewController: menuVc)
-        sideMenu?.leftSide = false
-
-        SideMenuManager.default.rightMenuNavigationController = sideMenu
-        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
-        SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .right)
+//        let menuVc = MenuViewController()
+//        sideMenu = SideMenuNavigationController(rootViewController: menuVc)
+//        sideMenu?.leftSide = false
+//
+//        SideMenuManager.default.rightMenuNavigationController = sideMenu
+//        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+//        SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.view, forMenu: .right)
     }
 
     @objc private func didTapMenuBttn() {

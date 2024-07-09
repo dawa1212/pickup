@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -16,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
             let window = UIWindow(windowScene: windowScene)
             let viewController = PickUpLineVc()
-            let navigationController = UINavigationController(rootViewController: viewController)
+            let navigationController = SideMenuNavigationController(rootViewController: viewController)
 
             window.rootViewController = navigationController
             self.window = window

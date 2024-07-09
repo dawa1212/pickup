@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3196792C3D921B0003DD96 /* FrontController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3196782C3D921B0003DD96 /* FrontController.swift */; };
 		350A43B82C3C37C0002C1501 /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A43B72C3C37C0002C1501 /* MenuViewCell.swift */; };
 		350A43BC2C3C49C2002C1501 /* SettingVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A43BB2C3C49C2002C1501 /* SettingVc.swift */; };
 		350A43BE2C3C4A35002C1501 /* TermsAndConditionVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350A43BD2C3C4A35002C1501 /* TermsAndConditionVc.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D3196782C3D921B0003DD96 /* FrontController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontController.swift; sourceTree = "<group>"; };
 		350A43B72C3C37C0002C1501 /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
 		350A43BB2C3C49C2002C1501 /* SettingVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVc.swift; sourceTree = "<group>"; };
 		350A43BD2C3C4A35002C1501 /* TermsAndConditionVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionVc.swift; sourceTree = "<group>"; };
@@ -59,6 +61,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D3196752C3D8DC60003DD96 /* PickupLine */ = {
+			isa = PBXGroup;
+			children = (
+				35F7EF432B8F53A2001DDFB0 /* PickUpLineVc.swift */,
+			);
+			path = PickupLine;
+			sourceTree = "<group>";
+		};
+		0D3196762C3D8DD60003DD96 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				350A43BB2C3C49C2002C1501 /* SettingVc.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		0D3196772C3D91F20003DD96 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0D3196782C3D921B0003DD96 /* FrontController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		350A43B92C3C492A002C1501 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,7 +97,6 @@
 		350A43BA2C3C494A002C1501 /* MenuVc */ = {
 			isa = PBXGroup;
 			children = (
-				350A43BB2C3C49C2002C1501 /* SettingVc.swift */,
 				350A43BD2C3C4A35002C1501 /* TermsAndConditionVc.swift */,
 				350A43BF2C3C4B6D002C1501 /* PrivacyAndPolicyVc.swift */,
 				350A43C12C3C4C80002C1501 /* ShareApp.swift */,
@@ -106,10 +131,11 @@
 		35F7EF3E2B8F53A2001DDFB0 /* PickUpLinesApp */ = {
 			isa = PBXGroup;
 			children = (
+				0D3196772C3D91F20003DD96 /* Base */,
 				357A60872C356F4900AE8452 /* Extensions */,
 				35F7EF592B8F7084001DDFB0 /* CustomCell */,
 				35F7EF552B8F546D001DDFB0 /* Model */,
-				35F7EF542B8F5465001DDFB0 /* Controller */,
+				35F7EF542B8F5465001DDFB0 /* Module */,
 				35F7EF532B8F5424001DDFB0 /* Resources */,
 				35F7EF4A2B8F53A4001DDFB0 /* LaunchScreen.storyboard */,
 				35F7EF4D2B8F53A4001DDFB0 /* Info.plist */,
@@ -128,13 +154,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		35F7EF542B8F5465001DDFB0 /* Controller */ = {
+		35F7EF542B8F5465001DDFB0 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				35F7EF432B8F53A2001DDFB0 /* PickUpLineVc.swift */,
+				0D3196762C3D8DD60003DD96 /* Setting */,
+				0D3196752C3D8DC60003DD96 /* PickupLine */,
 				350A43B92C3C492A002C1501 /* SideMenu */,
 			);
-			path = Controller;
+			path = Module;
 			sourceTree = "<group>";
 		};
 		35F7EF552B8F546D001DDFB0 /* Model */ = {
@@ -237,7 +264,8 @@
 				350A43C22C3C4C80002C1501 /* ShareApp.swift in Sources */,
 				353300DC2C33058E00003B91 /* MenuViewController.swift in Sources */,
 				350A43BE2C3C4A35002C1501 /* TermsAndConditionVc.swift in Sources */,
-				357A60892C356FEE00AE8452 /* Color + Extensions.swift in Sources */,
+				0D3196792C3D921B0003DD96 /* FrontController.swift in Sources */,
+				357A60892C356FEE00AE8452 /* Color+Extensions.swift in Sources */,
 				35F7EF402B8F53A2001DDFB0 /* AppDelegate.swift in Sources */,
 				35120E212C28641A00D043D7 /* PickUpLineModel.swift in Sources */,
 				350A43C02C3C4B6D002C1501 /* PrivacyAndPolicyVc.swift in Sources */,

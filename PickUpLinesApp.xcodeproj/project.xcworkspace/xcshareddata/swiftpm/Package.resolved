@@ -1,4 +1,5 @@
 {
+  "originHash" : "f60f31514ca7c9098e4711042bc8399f0faa729bb834a03f7fbe0fa4a643a501",
   "pins" : [
     {
       "identity" : "lbtatools",
@@ -19,5 +20,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

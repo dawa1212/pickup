@@ -76,7 +76,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let menuTitles = menuTitles[indexPath.row]
-        var viewController: UIViewController?
+        var viewController: UIViewController
         
         switch menuTitles {
             
@@ -97,8 +97,6 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             viewController = ShareApp()
         }
         
-        if let vc = viewController {
-            navigationController?.pushViewController(vc, animated: true)
-        }
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
