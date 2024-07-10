@@ -1,4 +1,5 @@
 {
+  "originHash" : "f60f31514ca7c9098e4711042bc8399f0faa729bb834a03f7fbe0fa4a643a501",
   "pins" : [
     {
       "identity" : "lbtatools",
@@ -8,7 +9,16 @@
         "revision" : "dce147bfbdc0417a4b430ec220c088629e9dc81d",
         "version" : "1.0.17"
       }
+    },
+    {
+      "identity" : "sidemenu",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jonkykong/SideMenu.git",
+      "state" : {
+        "revision" : "8bd4fd128923cf5494fa726839af8afe12908ad9",
+        "version" : "6.5.0"
+      }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
